@@ -22,6 +22,8 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
+import ListStyle from '@ckeditor/ckeditor5-list/src/liststyle';
+import ListStyleUI from '@ckeditor/ckeditor5-list/src/liststyleui';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -41,6 +43,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 
 import Mathematics from 'ckeditor5-math/src/math';
+import AutoformatMathematics from 'ckeditor5-math/src/autoformatmath';
 
 class Editor extends ClassicEditor {}
 
@@ -65,6 +68,8 @@ Editor.builtinPlugins = [
 	Italic,
 	Link,
 	List,
+	ListStyle,
+	ListStyleUI,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -82,7 +87,8 @@ Editor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	Underline,
-	Mathematics
+	Mathematics,
+	AutoformatMathematics
 ];
 
 export default Editor;

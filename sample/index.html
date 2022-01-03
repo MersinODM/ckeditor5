@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css" integrity="sha512-el2z+rjIj40JeIlKyqcoRjGNjvwHVlyahNQ1PhSs4PCztr6jJ4GgpjgN+1a++L9HZxhLXpa4eLG3ry976z0O2Q==" crossorigin="anonymous" />
 </head>
 <body data-editor="ClassicEditor" data-collaboration="false">
 	<header>
@@ -102,12 +102,10 @@
 			– Frederico Knabben. All rights reserved.
 		</p>
 	</footer>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
-
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/mhchem.min.js" integrity="sha384-PACpdmyZW2PMgcXY2jXmtQ38v2NDic4DNreFSAENncz6TZHcwdgAakjPiHYEAOuv"  crossorigin="anonymous"></script>
-
-	<script src="../build/ckeditor.js"></script>
-	<script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.js" integrity="sha512-O7WTu9pghLBfbQSGAf2xOFoRxDrHKS3kjRuuiCWttAf76q6h8Qj+KYPBF5EdZsE24LvXiFUshVNWaAxBOij8VA==" crossorigin="anonymous"></script>
+<!--	<script defer type="module" src="../build/ckeditor.js"></script>-->
+	<script type="module">
+		import Editor from '../build/ckeditor.js'
 		ClassicEditor
 			.create( document.querySelector( '.editor' ), {
 				math: {
@@ -118,28 +116,24 @@
 				},
 				toolbar: {
 					items: [
-						'|',
 						'bold',
 						'italic',
-						'underline',
+						'link',
 						'bulletedList',
 						'numberedList',
-						'highlight',
-						'|',
+						'subscript',
+						'superscript',
+						'underline',
 						'alignment',
+						'|',
 						'outdent',
 						'indent',
 						'|',
-						'insertTable',
-						'imageUpload',
-						'|',
-						'specialCharacters',
-						'superscript',
-						'subscript',
-						'|',
 						'math',
-						'|',
-						'removeFormat',
+						'specialCharacters',
+						'imageUpload',
+						'blockQuote',
+						'insertTable',
 						'undo',
 						'redo'
 					]
@@ -147,10 +141,9 @@
 				language: 'tr',
 				image: {
 					toolbar: [
+						'imageTextAlternative',
 						'imageStyle:full',
-						'imageStyle:side',
-						'|',
-						'imageTextAlternative'
+						'imageStyle:side'
 					]
 				},
 				table: {
@@ -170,7 +163,7 @@
 			.catch( error => {
 				console.error( 'Oops, something went wrong!' );
 				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-				console.warn( 'Build id: mfq56liy6dza-k09tcyixbcnx' );
+				console.warn( 'Build id: 14nbyztuod5v-3ae9ht8su7oc' );
 				console.error( error );
 			} );
 	</script>
